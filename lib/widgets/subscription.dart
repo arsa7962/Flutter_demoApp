@@ -1,6 +1,6 @@
-import 'package:demo_app/widgets/title.dart';
 import 'package:flutter/material.dart';
 
+import 'package:demo_app/widgets/title.dart';
 import '../theme/appTheme.dart';
 import '../resources/strings.dart';
 import './netflix.dart';

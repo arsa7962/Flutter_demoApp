@@ -1,5 +1,6 @@
-import 'package:demo_app/theme/appTheme.dart';
 import 'package:flutter/material.dart';
+
+import 'package:demo_app/theme/appTheme.dart';
 
 class ShaderText extends StatelessWidget {
   final String title;

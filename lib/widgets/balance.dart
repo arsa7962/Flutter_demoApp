@@ -1,4 +1,3 @@
-import 'package:demo_app/widgets/planCard.dart';
 import 'package:flutter/material.dart';
 
 import './loadBalance.dart';
@@ -7,6 +6,7 @@ import '../theme/appTheme.dart';
 import '../models/balance.dart';
 import '../models/recommendedPlans.dart';
 import '../resources/strings.dart';
+import './planCard.dart';
 
 class BalanceList extends StatelessWidget {
   final balanceList = [

@@ -1,4 +1,3 @@
-import 'package:demo_app/theme/appTheme.dart';
 import 'package:flutter/material.dart';
 
 import './accountDetails.dart';
@@ -9,6 +8,7 @@ import './roamingPlans.dart';
 import './rewards.dart';
 import './offers.dart';
 import './subscription.dart';
+import '../theme/appTheme.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

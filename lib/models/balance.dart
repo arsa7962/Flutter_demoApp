@@ -1,5 +1,3 @@
-import 'package:flutter/cupertino.dart';
-
 class Balance {
   final String title;
   final String value;

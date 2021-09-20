@@ -1,7 +1,7 @@
-import 'package:demo_app/models/balance.dart';
 import 'package:flutter/material.dart';
 
 import '../theme/appTheme.dart';
+import '../models/balance.dart';
 
 class BalanceCard extends StatelessWidget {
   final Balance data;

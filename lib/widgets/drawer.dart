@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../theme/appTheme.dart';
+import '../resources//strings.dart';
+
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({Key? key}) : super(key: key);
 
@@ -7,33 +10,69 @@ class MenuDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: ListView(
-        // Important: Remove any padding from the ListView.
         padding: EdgeInsets.zero,
         children: [
-          const DrawerHeader(
+          DrawerHeader(
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: AppTheme.colors.purple,
             ),
-            child: Text('Drawer Header'),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/oval-2.png'),
+                  radius: 32,
+                ),
+                SizedBox(height: 10),
+                Opacity(
+                  opacity: 0.64,
+                  child: Text(
+                    Strings.myPrepaid,
+                    style: TextStyle(
+                      color: AppTheme.colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 6,
+                ),
+                Text(
+                  Strings.id,
+                  style: TextStyle(
+                    color: AppTheme.colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
+            ),
           ),
           ListTile(
-            title: const Text('Item 1'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
+              title: Text(
+                Strings.aboutGlobe,
+                style: TextStyle(
+                  color: AppTheme.colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              }),
           ListTile(
-            title: const Text('Item 2'),
-            onTap: () {
-              // Update the state of the app
-              // ...
-              // Then close the drawer
-              Navigator.pop(context);
-            },
-          ),
+              title: Text(
+                Strings.payment,
+                style: TextStyle(
+                  color: AppTheme.colors.black,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              }),
         ],
       ),
     );

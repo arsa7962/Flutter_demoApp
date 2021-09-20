@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../resources/strings.dart';
+import '../theme/appTheme.dart';
+
 class AccountDetails extends StatelessWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -11,21 +14,43 @@ class AccountDetails extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'My Prepaid',
+            Strings.myPrepaid,
+            style: TextStyle(
+              color: AppTheme.colors.greyishBrownTwo,
+              fontSize: 12,
+            ),
           ),
           Row(
             children: [
               Expanded(
                   child: TextButton(
                 child: Row(
-                  children: [Text('7530014349'), Icon(Icons.expand_more)],
+                  children: [
+                    Text(
+                      Strings.id,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: AppTheme.colors.black,
+                      ),
+                    ),
+                    IconButton(
+                      onPressed: () {},
+                      icon: Icon(Icons.keyboard_arrow_down_outlined),
+                      iconSize: 25,
+                      color: AppTheme.colors.black,
+                    ),
+                  ],
                 ),
                 onPressed: () {},
                 style: TextButton.styleFrom(
                   padding: EdgeInsets.only(left: 0),
                 ),
               )),
-              Icon(Icons.add),
+              IconButton(
+                onPressed: () {},
+                icon: Icon(Icons.add),
+              )
             ],
           )
         ],

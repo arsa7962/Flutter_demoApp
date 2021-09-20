@@ -12,6 +12,6 @@ class Strings {
   static const subscription = "My Subscriptions";
   static const subscrip = "With remaining 12GB, you can watch 640 min of video";
   static const suggestions = 'You might also like';
-    static const aboutGlobe = "About Globe";
+  static const aboutGlobe = "About Globe";
   static const payment = "Payment";
 }

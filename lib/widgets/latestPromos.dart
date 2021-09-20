@@ -7,7 +7,7 @@ import '../widgets/latestPromoCard.dart';
 import '../widgets/title.dart';
 
 class LatestPromos extends StatelessWidget {
-  final List<Media> data = [
+  final data = [
     Media(
       icon: 'assets/bitmap-4.png',
       title: 'Spotify Premium',

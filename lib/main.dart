@@ -1,9 +1,12 @@
-import 'package:demo_app/theme/appTheme.dart';
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
 
+import 'package:demo_app/theme/appTheme.dart';
 import './widgets/drawer.dart';
-import './widgets/body.dart';
+import './screens/mobile.dart';
+import './screens/lifeStyle.dart';
+import './screens/wallet.dart';
+import './screens/more.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,6 +45,19 @@ class _HomePageState extends State<HomePage> {
             ));
   }
 
+  Widget body() {
+    switch (indexValue) {
+      case 0:
+        return Mobile();
+      case 1:
+        return LifeStyle();
+      case 2:
+        return Wallet();
+      default:
+        return Mobile();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +93,7 @@ class _HomePageState extends State<HomePage> {
       ),
       backgroundColor: Theme.of(context).backgroundColor,
       drawer: MenuDrawer(),
-      body: Body(),
+      body: body(),
       bottomNavigationBar: SafeArea(
         child: BottomNavigationBar(
           currentIndex: indexValue,
@@ -88,19 +104,47 @@ class _HomePageState extends State<HomePage> {
           type: BottomNavigationBarType.fixed,
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.phone_android_outlined),
+              icon: IconButton(
+                  onPressed: () {
+                    setState(() {
+                      indexValue = 0;
+                    });
+                  },
+                  icon: Icon(Icons.phone_android_outlined)),
               label: 'Mobile',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.wine_bar_outlined),
+              icon: IconButton(
+                onPressed: () {
+                  setState(() {
+                    indexValue = 1;
+                  });
+                },
+                icon: Icon(Icons.wine_bar_outlined),
+              ),
               label: 'LifeStyle',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.wallet_membership_outlined),
+              icon: IconButton(
+                onPressed: () {
+                  setState(() {
+                    indexValue = 2;
+                  });
+                },
+                icon: Icon(Icons.wallet_membership_outlined),
+              ),
               label: 'Wallet',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.more_vert_outlined),
+              icon: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => More()),
+                  );
+                },
+                icon: Icon(Icons.more_vert_outlined),
+              ),
               label: 'More',
             ),
           ],

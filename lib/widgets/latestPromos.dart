@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/appTheme.dart';
 import '../resources/strings.dart';
-import '../models/latestPromo.dart';
+import '../core/models/latestPromo.dart';
 import '../widgets/latestPromoCard.dart';
 import '../widgets/title.dart';
 

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:demo_app/theme/appTheme.dart';
 import 'package:demo_app/widgets/title.dart';
-import '../models/globalRewards.dart';
+import '../core/models/globalRewards.dart';
 import '../resources/strings.dart';
 
 class Rewards extends StatelessWidget {

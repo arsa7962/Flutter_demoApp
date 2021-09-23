@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:demo_app/widgets/card.dart';
-import 'package:demo_app/models/card.dart';
+import 'package:demo_app/core/models/card.dart';
 import 'package:demo_app/theme/appTheme.dart';
 import 'package:demo_app/widgets/title.dart';
 import '../resources/strings.dart';

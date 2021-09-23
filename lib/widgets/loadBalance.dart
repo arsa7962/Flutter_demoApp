@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../models/balance.dart';
+import '../core/models/balance.dart';
 import '../theme/appTheme.dart';
 
 class LoadBalance extends StatelessWidget {

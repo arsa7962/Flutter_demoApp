@@ -3,24 +3,13 @@ import 'package:flutter/material.dart';
 import './loadBalance.dart';
 import './balanceCard.dart';
 import '../theme/appTheme.dart';
-import '../models/balance.dart';
-import '../models/recommendedPlans.dart';
+import '../core/models/balance.dart';
+import '../core/models/recommendedPlans.dart';
 import '../resources/strings.dart';
 import './planCard.dart';
 
 class BalanceList extends StatelessWidget {
-  final balanceList = [
-    Balance(
-        title: 'Data Balance',
-        value: '300 MB',
-        subtitle: 'of 12 GB',
-        image: 'assets/group-67.png'),
-    Balance(
-        title: 'Data Balance',
-        value: '300 MB',
-        subtitle: 'of 12 GB',
-        image: 'assets/group-67.png'),
-  ];
+  final balanceList;
   final plans = [
     Plan(
         id: 'GoUNLI350',
@@ -35,6 +24,7 @@ class BalanceList extends StatelessWidget {
         title: '30 days UNLI to Globe',
         color: AppTheme.colors.warmBlue2),
   ];
+  BalanceList(this.balanceList);
 
   @override
   Widget build(BuildContext context) {
@@ -51,13 +41,13 @@ class BalanceList extends StatelessWidget {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 15),
               child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    LoadBalance(),
+                    // LoadBalance(),
                     SizedBox(
                       width: 6,
                     ),

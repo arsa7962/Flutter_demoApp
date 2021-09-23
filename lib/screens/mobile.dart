@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/accountDetails.dart';
-import '../widgets/balance.dart';
 import '../widgets/specialPromo.dart';
 import '../widgets/latestPromos.dart';
 import '../widgets/roamingPlans.dart';
 import '../widgets/rewards.dart';
 import '../widgets/offers.dart';
 import '../widgets/subscription.dart';
+import '../container/balance_container.dart';
 import '../theme/appTheme.dart';
 
 class Mobile extends StatelessWidget {
@@ -21,7 +21,7 @@ class Mobile extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AccountDetails(),
-            BalanceList(),
+            BalanceContainer(),
             SpecialPromo(),
             LatestPromos(),
             RoamingPlans(),
@@ -29,7 +29,8 @@ class Mobile extends StatelessWidget {
             Offers(),
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+              decoration:
+                  BoxDecoration(borderRadius: BorderRadius.circular(12)),
               padding: EdgeInsets.all(20),
               child: OutlinedButton(
                   style: OutlinedButton.styleFrom(

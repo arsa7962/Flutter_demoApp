@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:demo_app/models/latestPromo.dart';
+import 'package:demo_app/core/models/latestPromo.dart';
 import 'package:demo_app/theme/appTheme.dart';
 
 class LatestPromo extends StatelessWidget {

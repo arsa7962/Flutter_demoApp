@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../theme/appTheme.dart';
 import '../resources/strings.dart';
 import './offerCard.dart';
-import '../models/offer.dart';
+import '../core/models/offer.dart';
 
 class Offers extends StatelessWidget {
   final List<Offer> data = [

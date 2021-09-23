@@ -9,4 +9,10 @@ class Balance {
       required this.value,
       required this.subtitle,
       required this.image});
+
+  static Balance fromJson(json) => Balance(
+      title: json['title'],
+      value: json['value'],
+      subtitle: json['subtitle'],
+      image: json['image']);
 }

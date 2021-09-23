@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theme/appTheme.dart';
 import '../resources/strings.dart';
-import '../models/ottSubcription.dart';
+import '../core/models/ottSubcription.dart';
 import './ottCard.dart';
 
 class Ott extends StatelessWidget {

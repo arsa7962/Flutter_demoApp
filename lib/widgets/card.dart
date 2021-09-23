@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:demo_app/theme/appTheme.dart';
-import '../models/card.dart';
+import '../core/models/card.dart';
 
 class CustomCard extends StatelessWidget {
   final CardModel data;
